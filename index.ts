@@ -1,8 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const Contact = require("./contact.js"); // Update this path to where your Contact model is located
-const connectDB = require("./db.config");
+const Contact = require("./contact.ts"); // Update this path to where your Contact model is located
+const connectDB = require("./db.config.ts");
 
 // Initialize Express app
 const app = express();
@@ -28,4 +28,5 @@ app.post("/contacts", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-// ... (previous code) module.exports = app; // Export the Express app
+
+module.exports = app;
