@@ -28,5 +28,4 @@ app.post("/contacts", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-// ... (previous code)
-module.exports = app; // Export the Express app
+// ... (previous code) module.exports = app; // Export the Express app
