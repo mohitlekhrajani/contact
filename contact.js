@@ -4,26 +4,19 @@ const mongoose = require("mongoose");
 const contactSchema = new mongoose.Schema({
   firstName: {
     type: String,
-    required: true,
-  },
-  lastName: {
-    type: String,
-    required: true,
   },
   email: {
     type: String,
     required: true,
     unique: true, // Ensures email addresses are unique in the collection
   },
-  phoneNumber: {
+  message: {
     type: String,
-    required: false, // Make this optional
+  
   },
-  address: {
-    street: String,
-    city: String,
-    state: String,
-    zipCode: String,
+  reason: {
+    type: String,
+    
   },
   createdAt: {
     type: Date,
