@@ -1,8 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const Contact = require("./contact.ts"); // Update this path to where your Contact model is located
-const connectDB = require("./db.config.ts");
+const Contact = require("./contact.js"); // Update this path to where your Contact model is located
+const connectDB = require("./db.config.js");
+const cors = require("cors");
 
 // Initialize Express app
 const app = express();
@@ -12,6 +13,7 @@ connectDB();
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
+app.use(cors()); 
 
 // POST API to create a new contact
 app.post("/contacts", async (req, res) => {
