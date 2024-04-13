@@ -15,6 +15,9 @@ app.use(bodyParser.json());
 app.use(cors()); 
 
 // POST API to create a new contact
+app.get("/", (req, res) => {
+  res.json({ message: "Testing Contact  Json" });
+});
 app.post("/contacts", async (req, res) => {
   try {
     const newContact = new Contact(req.body);
